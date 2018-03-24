@@ -147,9 +147,39 @@ class BioForm extends React.Component {
                         { this.toSimpleField('faceclaim', 'character, series') }
 
                         { this.toSimpleField('image one', 'try and include at least one full body picture') }
-                        { this.toSimpleField('image two', 'at least three pictures, no extra appearance info needed') }
-                        { this.toSimpleField('image three', 'non imgur links please') }
-                        { this.toLargeField('appearance', 'if you do not have a faceclaim, write at least 300 words')}
+                        { this.toSimpleField('image two', 'non imgur links please') }
+                        { this.toSimpleField('image three', 'with three pictures, no extra appearance info needed') }
+                        { this.toLargeField('appearance', 'if you do not have a faceclaim or do not have three photos, write at least 300 words.')}
+
+                        <h1 style={{ textAlign: 'right' }}>Personality</h1>
+                        <hr />
+                        { this.toSimpleField('positive trait 1') }
+                        { this.toSimpleField('positive trait 2') }
+                        { this.toSimpleField('positive trait 3') }
+                        { this.toSimpleField('positive trait 4') }
+                        { this.toSimpleField('positive trait 5') }
+                        { this.toSimpleField('negative trait 1') }
+                        { this.toSimpleField('negative trait 2') }
+                        { this.toSimpleField('negative trait 3') }
+                        { this.toSimpleField('negative trait 4') }
+                        { this.toSimpleField('negative trait 5') }
+                        { this.toLargeField('personality', 'elaborate on each trait here.  for more depth, you could expand your likes and dislikes, goals, relationships, etc.')}
+
+                        <h1 style={{ textAlign: 'right' }}>History</h1>
+                        <hr />
+                        { this.toSimpleField('hometown', 'town, region') }
+                        { this.toLargeField('history', 'information ranging from original region/hometown, from their birth to the present with all events that shaped their backstory and personality') }
+
+                        <h1 style={{ textAlign: 'right' }}>Team</h1>
+                        <hr />
+
+                        <h1 style={{ textAlign: 'right' }}>About You</h1>
+                        <hr />
+                        { this.toSimpleField('alias', 'the name you go by') }
+                        { this.toSimpleField('gender/Pronouns') }
+                        { this.toSimpleField('your age', 'in years') }
+                        { this.toSimpleField('character number', 'is this your first character? second? etc') }
+                        { this.toSimpleField('where did you find us?', 'ad, affiliate, word of mouth?') }
                     </div>
                     <div className='column'>
                         Second column
