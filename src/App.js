@@ -1,21 +1,36 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import BioForm from './components/BioForm';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
-}
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+
+const Home = () => <h1>Home</h1>;
+
+const NavBar = () => (
+    <div>
+        <Link to="/">Home</Link>
+        { ' | ' }
+        <Link to='/bio'>Bio Form</Link>
+    </div>
+);
+
+const App = () => (
+    <Router>
+        <div className='App'>
+            <header className='App-header'>
+                Header
+            </header>
+            <NavBar />
+            <div>
+                <Route exact path='/' component={Home} />
+                <Route path='/bio' component={BioForm} />
+            </div>
+            <hr />
+            <p className='App-intro'>
+                <small>This will be some nicer footer stuff eventually.</small>
+            </p>
+        </div>
+    </Router>
+);
 
 export default App;
