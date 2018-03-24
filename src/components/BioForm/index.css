@@ -1,0 +1,23 @@
+
+    /* lecs cute app */
+
+table.app { width: 270px; background:#eee; border-collapse: collapse;text-align:center;text-transform:uppercase; } 
+td.app {border:2px solid #fff; font-family:consolas;font-size:10px; padding:5px; }
+
+table.traits {font-family: tahoma; font-size:9px; padding:0px; }
+td.list {font-family:arial; border:2px solid #fff; font-size:10px; }
+td.header {background:#eee; font:10px consolas; text-transform:uppercase; vertical-align:center; width:45px;padding:5px; border-top:3px solid #eee; border-left:3px solid #eee; text-align:justify;}
+
+.appbox { width:400px;margin:0px auto;background:#fff;border:1px solid #eee;text-align:justify;font:10.5px arial;padding:15px; }
+.apppic {height:100px;width:100px;border:10px solid #eee; float:left;margin-right:10px;margin-top:15px;height:100px;width:100px; }
+.cat0 {font:20px Open Sans;margin-bottom:-10px;text-align:center;text-transform:lowercase}
+.cat1 {font:30px Oswald;text-align:center; text-transform: uppercase; }
+.cat2 {margin-top:5px;font:20px Oswald;text-align:left;border-bottom:5px solid #eee;margin-bottom:5px; border-right:5px solid transparent;}
+.cat3 {float:right;font:10px consolas;  text-transform: uppercase; } 
+.cat4 {margin-top:5px;font:20px Oswald;text-align:right;border-bottom:5px solid #eee;margin-bottom:5px;border-left:5px solid transparent;}
+
+.pokemon {font:10px arial;padding-top:5px;padding-bottom:10px;} 
+
+.rpbox {border-radius: 50px 50px 0px 0px; margin:0px auto;background:#eee;width:300px;padding:10px;border-top:5px solid #b4ced5;border-right:5px solid #ccc;border-left:5px solid #ccc;font:10px arial;text-align:left;}
+.rptext {font:15px Oswald;border-bottom:1px solid #777;padding-bottom:5px;text-align:center;}
+.jinwha {font:10px consolas;text-align:center;opacity:.8;padding-top:5px;}

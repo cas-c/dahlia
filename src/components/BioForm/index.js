@@ -1,10 +1,13 @@
 import React from 'react';
 import DayPickerInput from 'react-day-picker/DayPickerInput';
+import StylizedForm from './StylizedForm';
+
 import 'react-day-picker/lib/style.css';
+import './index.css';
 
 const toOpt = x => <option key={x} value={x}>{x}</option>;
-const tclassOptions = () => ['trainer', 'coordinator', 'civilian'].map(toOpt);
-const affiliationOptions = () => ['neutral', 'team rocket'].map(toOpt);
+const tclassOptions = () => ['trainer', 'coordinator', 'civilian', 'breeder'].map(toOpt);
+const affiliationOptions = () => ['neutral', 'team rocket', 'anti-TR'].map(toOpt);
 
 class BioForm extends React.Component {
     constructor() {
@@ -65,7 +68,7 @@ class BioForm extends React.Component {
     )
 
     inputChanged = (e, f) => {
-        this.setState({ form: { [f]: e.target.value }});
+        this.setState({ form: Object.assign({}, this.state.form, { [f]: e.target.value })});
     };
 
     largeInputChanged = (e, f) => {
@@ -75,11 +78,11 @@ class BioForm extends React.Component {
     }
 
     dayChanged = bday => {
-        console.log(`${bday.getMonth() + 1}/${bday.getDate()}`);
         this.setState({ form: { bday: `${bday.getMonth() + 1}/${bday.getDate()}` }});
     }
 
     render() {
+        console.log(this.state);
         return (
             <div>
                 <div className='columns' style={{ padding: '0 20%' }}>
@@ -140,6 +143,7 @@ class BioForm extends React.Component {
                                 />
                             </div>
                         </div>*/}
+                        { this.toSimpleField('icon') }
                         { /* page 2? */ }
                         <h1 style={{ textAlign: 'right' }}>Appearance</h1>
                         <hr />
@@ -181,8 +185,8 @@ class BioForm extends React.Component {
                         { this.toSimpleField('character number', 'is this your first character? second? etc') }
                         { this.toSimpleField('where did you find us?', 'ad, affiliate, word of mouth?') }
                     </div>
-                    <div className='column'>
-                        Second column
+                    <div className="column">
+                        <StylizedForm data={this.state.form}/>
                     </div>
                 </div>
             </div>            
