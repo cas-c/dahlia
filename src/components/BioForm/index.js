@@ -59,7 +59,7 @@ class BioForm extends React.Component {
                 <input
                     className='input'
                     type='text'
-                    placeholder={y ? y : x}
+                    placeholder={y || x}
                     value={this.state.form[x]}
                     onChange={e => this.inputChanged(e, x)}
                 />
@@ -83,7 +83,7 @@ class BioForm extends React.Component {
                 <textarea
                     className='textarea'
                     type='textarea'
-                    placeholder={y ? y : x}
+                    placeholder={y || x}
                     value={this.state.form[x]}
                     onChange={e => this.largeInputChanged(e, x)}
                 />
