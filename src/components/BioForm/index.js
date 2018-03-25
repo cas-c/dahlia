@@ -166,8 +166,9 @@ class BioForm extends React.Component {
         console.log(this.state);
         return (
             <div>
-                <div>
+                <div style={{ padding: '10px' }}>
                     <button onClick={this.clear}>clear</button>
+                    { ' ' }
                     <button onClick={this.reset}>reset</button>
                 </div>
                 <div className='columns' style={{ padding: '0 20%' }}>
