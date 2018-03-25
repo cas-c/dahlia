@@ -1,6 +1,6 @@
 import React from 'react';
-import DayPickerInput from 'react-day-picker/DayPickerInput';
 import StylizedForm from './StylizedForm';
+import PostTemplate from './PostTemplate';
 
 import 'react-day-picker/lib/style.css';
 import './index.css';
@@ -14,15 +14,39 @@ class BioForm extends React.Component {
         super();
         this.state = {
             form: {
-                age: '',
-                name: '',
-                tclass: '',
-                birthday: '',
-                aff: '',
-                gender: '',
-                sexuality: '',
-                occupation: '',
-                rank: ''
+                icon: 'http://i.imgur.com/5Rcbl.png',
+                tclass: 'trainer class',
+                name: 'FIRST LAST',
+                age: 'age',
+                birthday: 'birthday',
+                gender: 'gender',
+                aff: 'affiliation',
+                rank: 'rank',
+                sexuality: 'sexuality',
+                occupation: 'occupation',
+                faceclaim: 'character, series',
+                'image one': 'link for picture 1',
+                'image two': 'link for picture 2',
+                'image three': 'link for picture 3',
+                appearance: "the pictures section is for pictures of your face claim. try to include at least one full body picture for reference. if you have at least three pictures of your face claim, you can skip the rest of the appearance section. if your character doesn't have a face claim, you can leave the pictures section blank.  300 word minimum.",
+                'positive trait 1': 'positive trait 1',
+                'positive trait 2': 'positive trait 2',
+                'positive trait 3': 'positive trait 3',
+                'positive trait 4': 'positive trait 4',
+                'positive trait 5': 'positive trait 5',
+                'negative trait 1': 'negative trait 1',
+                'negative trait 2': 'negative trait 2',
+                'negative trait 3': 'negative trait 3',
+                'negative trait 4': 'negative trait 4',
+                'negative trait 5': 'negative trait 5',
+                personality: "elaborate on each positive and negative trait here. for even more depth, you could expand on your character's likes and dislikes, goals, interpersonal relationships with other people and pokemon, etc. 300 word minimum.",
+                hometown: 'town, region',
+                history: " your character can come from a canon pokemon region, a real world location, or they could've been born and raised in jinoa. your character's history should span from birth to the present and should include events that shaped both their backstory and their current personality. 300 word minimum",
+                alias: 'name you go by',
+                'gender/Pronouns': 'your gender, as well as your preferred pronouns',
+                'your age': 'in years ',
+                'character number': 'is this your first character? your second? ',
+                'where did you find us?': 'was it an ad, affiliate, word of mouth?'
             },
             counts: {}
         };
@@ -113,7 +137,7 @@ class BioForm extends React.Component {
                             <div className='control'>
                                 <div className='select'>
                                     <select
-                                        value={this.state.form.tclass}
+                                        value={this.state.form.aff}
                                         onChange={e => this.inputChanged(e, 'aff')}
                                     >
                                         { affiliationOptions() }
@@ -186,8 +210,13 @@ class BioForm extends React.Component {
                         { this.toSimpleField('where did you find us?', 'ad, affiliate, word of mouth?') }
                     </div>
                     <div className="column">
+                        <h1 style={{ textAlign: 'right' }}>(Semi Accurate) Preview</h1>
+                        <hr />
                         <StylizedForm data={this.state.form}/>
                     </div>
+                </div>
+                <div>
+                    <PostTemplate data={this.state.form}/>
                 </div>
             </div>            
         );

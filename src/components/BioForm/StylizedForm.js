@@ -2,7 +2,7 @@ import React from 'react';
 
 const StylizedForm = ({ data }) => (
     <div className="appbox">
-        <img src={data.icon} className="apppic" />
+        <img src={data.icon} alt={data.icon} className="apppic" />
         <div className="cat0">{data.tclass}</div>
         <div className="cat1">{data.name}</div>
         <table className="app">
@@ -13,29 +13,33 @@ const StylizedForm = ({ data }) => (
                 </tr>
                 <tr>
                     <td className="app">{data.gender}</td>
-                    <td className="app">{data.aff}</td>
+                    <td className="app">{data.aff} {data.rank === 'rank' ? '' : data.rank}</td>
                 </tr>
                 <tr>
                     <td className="app">{data.sexuality} </td>
-                    <td className="app">{data.occupation}</td>
+                    <td className="app">{data.occupation === 'occupation' ? 'N/A' : data.occupation}</td>
                 </tr>
             </tbody>
         </table> 
         <div className="cat2">APPEARANCE • 
             <div className="cat3">FACECLAIM: {data.faceclaim} </div>
         </div>
-        <table className="traits">
-            <tbody>
-                <tr>
-                    <td className="header">pictures </td>
-                    <td className="list">
-                        <a href={data['image one']}>one</a> { ' ' }
-                        <a href={data['image two']}>two</a> { ' ' }
-                        <a href={data['image three']}>three</a>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        {
+            data['image one'] !== 'link for picture 1' ?
+                <table className="traits">
+                    <tbody>
+                        <tr>
+                            <td className="header">pictures </td>
+                            <td className="list">
+                                <a href={data['image one']}>one</a> { ' ' }
+                                <a href={data['image two']}>two</a> { ' ' }
+                                <a href={data['image three']}>three</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table> :
+                ''
+        }
         <p>{data.appearance}</p>
         <div className="cat4">• PERSONALITY </div>
         <table className="traits">
@@ -43,25 +47,26 @@ const StylizedForm = ({ data }) => (
                 <tr>
                     <td className="header">positive </td>
                     <td className="list"> 
-                        {data['positive trait 1']} { ' ' }
-                        {data['positive trait 2']} { ' ' }
-                        {data['positive trait 3']} { ' ' }
-                        {data['positive trait 4']} { ' ' }
-                        {data['positive trait 5']} { ' ' }
+                        {data['positive trait 1']}, &nbsp;
+                        {data['positive trait 2']}, &nbsp;
+                        {data['positive trait 3']}, &nbsp;
+                        {data['positive trait 4']}, &nbsp;
+                        {data['positive trait 5']}
                     </td>
                 </tr>
                 <tr>
                     <td className="header">negative <br /></td>
                     <td className="list">
-                        {data['negative trait 1']} { ' ' }
-                        {data['negative trait 2']} { ' ' }
-                        {data['negative trait 3']} { ' ' }
-                        {data['negative trait 4']} { ' ' }
-                        {data['negative trait 5']} { ' ' }
+                        {data['negative trait 1']}, &nbsp;
+                        {data['negative trait 2']}, &nbsp;
+                        {data['negative trait 3']}, &nbsp;
+                        {data['negative trait 4']}, &nbsp;
+                        {data['negative trait 5']}
                     </td>
                 </tr>
             </tbody>
         </table> 
+        <br />
         <p>{data.personality}</p>
         <div className="cat2">HISTORY •  </div>
          <table className="traits">
@@ -92,17 +97,5 @@ const StylizedForm = ({ data }) => (
         </div>
     </div>
 );
-
-StylizedForm.defaultProps = {
-    data: {
-        name: 'first last',
-        tclass: 'TRAINER CLASS',
-        icon: 'http://i.imgur.com/5Rcbl.png',
-        age: 'age',
-        bday: 'birthday',
-        gender: 'gender',
-        [`gender/Pronouns`]: 'your gender, as well as your preferred pronouns'
-    }
-}
 
 export default StylizedForm;
