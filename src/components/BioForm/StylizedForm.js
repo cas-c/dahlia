@@ -95,6 +95,7 @@ const StylizedForm = ({ data }) => (
 
 StylizedForm.defaultProps = {
     data: {
+        name: 'first last',
         tclass: 'TRAINER CLASS',
         icon: 'http://i.imgur.com/5Rcbl.png',
         age: 'age',
