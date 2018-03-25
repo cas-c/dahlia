@@ -4,12 +4,12 @@ const StylizedForm = ({ data }) => (
     <div className="appbox">
         <img src={data.icon} className="apppic" />
         <div className="cat0">{data.tclass}</div>
-        <div className="cat1">FIRST LAST</div>
+        <div className="cat1">{data.name}</div>
         <table className="app">
             <tbody>
                 <tr>
                     <td className="app">{data.age}</td>
-                    <td className="app">{data.bday}</td>
+                    <td className="app">{data.birthday}</td>
                 </tr>
                 <tr>
                     <td className="app">{data.gender}</td>
