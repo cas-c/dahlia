@@ -9,45 +9,92 @@ const toOpt = x => <option key={x} value={x}>{x}</option>;
 const tclassOptions = () => ['trainer', 'coordinator', 'civilian', 'breeder'].map(toOpt);
 const affiliationOptions = () => ['neutral', 'team rocket', 'anti-TR'].map(toOpt);
 
+const defaultState = {
+    icon: 'http://i.imgur.com/5Rcbl.png',
+    tclass: 'trainer class',
+    name: 'FIRST LAST',
+    age: 'age',
+    birthday: 'birthday',
+    gender: 'gender',
+    aff: 'affiliation',
+    rank: 'rank',
+    sexuality: 'sexuality',
+    occupation: 'occupation',
+    faceclaim: 'character, series',
+    'image one': 'link for picture 1',
+    'image two': 'link for picture 2',
+    'image three': 'link for picture 3',
+    appearance: "the pictures section is for pictures of your face claim. try to include at least one full body picture for reference. if you have at least three pictures of your face claim, you can skip the rest of the appearance section. if your character doesn't have a face claim, you can leave the pictures section blank.  300 word minimum.",
+    'positive trait 1': 'positive trait 1',
+    'positive trait 2': 'positive trait 2',
+    'positive trait 3': 'positive trait 3',
+    'positive trait 4': 'positive trait 4',
+    'positive trait 5': 'positive trait 5',
+    'negative trait 1': 'negative trait 1',
+    'negative trait 2': 'negative trait 2',
+    'negative trait 3': 'negative trait 3',
+    'negative trait 4': 'negative trait 4',
+    'negative trait 5': 'negative trait 5',
+    personality: "elaborate on each positive and negative trait here. for even more depth, you could expand on your character's likes and dislikes, goals, interpersonal relationships with other people and pokemon, etc. 300 word minimum.",
+    hometown: 'town, region',
+    history: " your character can come from a canon pokemon region, a real world location, or they could've been born and raised in jinoa. your character's history should span from birth to the present and should include events that shaped both their backstory and their current personality. 300 word minimum",
+    alias: 'name you go by',
+    'gender/Pronouns': 'your gender, as well as your preferred pronouns',
+    'your age': 'in years ',
+    'character number': 'is this your first character? your second? ',
+    'where did you find us?': 'was it an ad, affiliate, word of mouth?'
+};
+
+const cleanState = {
+    icon: '',
+    tclass: '',
+    name: '',
+    age: '',
+    birthday: '',
+    gender: '',
+    aff: '',
+    rank: '',
+    sexuality: '',
+    occupation: '',
+    faceclaim: '',
+    'image one': '',
+    'image two': '',
+    'image three': '',
+    appearance: "",
+    'positive trait 1': '',
+    'positive trait 2': '',
+    'positive trait 3': '',
+    'positive trait 4': '',
+    'positive trait 5': '',
+    'negative trait 1': '',
+    'negative trait 2': '',
+    'negative trait 3': '',
+    'negative trait 4': '',
+    'negative trait 5': '',
+    personality: "",
+    hometown: '',
+    history: "",
+    alias: '',
+    'gender/Pronouns': '',
+    'your age': '',
+    'character number': '',
+    'where did you find us?': ''
+};
+
+const checkForLocalStorage = () => {
+    const data = JSON.parse(JSON.stringify(defaultState));
+    Object.keys(data).forEach(d => { const ls = localStorage.getItem(d); data[d] = ls !== null ? ls : data[d] });
+    return data;
+}
+
+
 class BioForm extends React.Component {
     constructor() {
         super();
+        const form = checkForLocalStorage();
+        console.log(form);
         this.state = {
-            form: {
-                icon: 'http://i.imgur.com/5Rcbl.png',
-                tclass: 'trainer class',
-                name: 'FIRST LAST',
-                age: 'age',
-                birthday: 'birthday',
-                gender: 'gender',
-                aff: 'affiliation',
-                rank: 'rank',
-                sexuality: 'sexuality',
-                occupation: 'occupation',
-                faceclaim: 'character, series',
-                'image one': 'link for picture 1',
-                'image two': 'link for picture 2',
-                'image three': 'link for picture 3',
-                appearance: "the pictures section is for pictures of your face claim. try to include at least one full body picture for reference. if you have at least three pictures of your face claim, you can skip the rest of the appearance section. if your character doesn't have a face claim, you can leave the pictures section blank.  300 word minimum.",
-                'positive trait 1': 'positive trait 1',
-                'positive trait 2': 'positive trait 2',
-                'positive trait 3': 'positive trait 3',
-                'positive trait 4': 'positive trait 4',
-                'positive trait 5': 'positive trait 5',
-                'negative trait 1': 'negative trait 1',
-                'negative trait 2': 'negative trait 2',
-                'negative trait 3': 'negative trait 3',
-                'negative trait 4': 'negative trait 4',
-                'negative trait 5': 'negative trait 5',
-                personality: "elaborate on each positive and negative trait here. for even more depth, you could expand on your character's likes and dislikes, goals, interpersonal relationships with other people and pokemon, etc. 300 word minimum.",
-                hometown: 'town, region',
-                history: " your character can come from a canon pokemon region, a real world location, or they could've been born and raised in jinoa. your character's history should span from birth to the present and should include events that shaped both their backstory and their current personality. 300 word minimum",
-                alias: 'name you go by',
-                'gender/Pronouns': 'your gender, as well as your preferred pronouns',
-                'your age': 'in years ',
-                'character number': 'is this your first character? your second? ',
-                'where did you find us?': 'was it an ad, affiliate, word of mouth?'
-            },
+            form,
             counts: {}
         };
     }
@@ -92,7 +139,9 @@ class BioForm extends React.Component {
     )
 
     inputChanged = (e, f) => {
-        this.setState({ form: Object.assign({}, this.state.form, { [f]: e.target.value })});
+        const form = Object.assign({}, this.state.form, { [f]: e.target.value });
+        this.setState({ form });
+        localStorage.setItem(f, e.target.value);
     };
 
     largeInputChanged = (e, f) => {
@@ -104,11 +153,23 @@ class BioForm extends React.Component {
     dayChanged = bday => {
         this.setState({ form: { bday: `${bday.getMonth() + 1}/${bday.getDate()}` }});
     }
+    clear = () => {
+        this.setState({ form: cleanState });
+        Object.keys(cleanState).forEach(key => localStorage.setItem(key, ''));
+    };
+    reset = () => {
+        this.setState({ form: defaultState });
+        Object.keys(defaultState).forEach(key => localStorage.setItem(key, defaultState[key]));
+    }
 
     render() {
         console.log(this.state);
         return (
             <div>
+                <div>
+                    <button onClick={this.clear}>clear</button>
+                    <button onClick={this.reset}>reset</button>
+                </div>
                 <div className='columns' style={{ padding: '0 20%' }}>
                     <div className='column' style={{ textAlign: 'left', maxWidth: '30em' }}>
                         <h1 style={{ textAlign: 'right' }}>Basic Info</h1>

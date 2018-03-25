@@ -1,9 +1,7 @@
 import React from 'react';
+import {CopyToClipboard} from 'react-copy-to-clipboard';
 
-const PostTemplate = ({ data }) => (
-    <div>
-        <textarea readOnly cols="120" rows="30" value={
-                `[dohtml]<div class="appbox"> <img src="${data.icon}" class="apppic">
+const convert = data => `[dohtml]<div class="appbox"> <img src="${data.icon}" class="apppic">
 </*NOTE: below put your character's trainer class, meaning trainer, coordinator, breeder, or civilian*/>
 <div class="cat0">${data.tclass}</div>
 <div class="cat1">${data.name.toUpperCase()}</div>
@@ -85,10 +83,20 @@ ${
 <style type="text/css">.direcbox { width: 300px; background-color: #fff; border: 1px solid #000; } 
 .directxt { font: 10px/95% arial; text-align: justify; padding: 3px; }
 .xtratxt { width: 400px; font: 10px/95% arial; text-align: justify; }</style>[/dohtml]
-                `
-            }>
-        </textarea>
-    </div>
-);
+                `;
+
+const PostTemplate = ({ data }) => {
+    const convertedData = convert(data);
+    return (
+      <div>
+          <CopyToClipboard text={convertedData}>
+              <button>copy to clipboard</button>
+          </CopyToClipboard>
+          <br />
+          <textarea readOnly cols="120" rows="30" value={convertedData}>
+          </textarea>
+      </div>
+    )
+};
 
 export default PostTemplate;
