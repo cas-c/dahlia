@@ -1,0 +1,129 @@
+{
+    "routes": [
+        {
+            "name": "Cubic City",
+            "pokemon": ["Zigzagoon", "Snubbull", "Trubbish", "Emolga", "Poochyena", "Solosis", "Aipom", "Timburr"],
+            "link": "http://jinoa.b1.jcink.com/index.php?showforum=24"
+        },
+        {
+            "name": "Route 1 - Lazuli River",
+            "pokemon": ["Buneary", "Pidgey", "Wurmple", "Nidoran (♂/♀)", "Hoppip", "Sewaddle", "Flabébé", "Bonsly", "Pikipek", "Yungoos", "Magikarp", "Goldeen", "Barboach", "Lotad", "Stunfisk", "Surskit" ],
+            "link": "http://jinoa.b1.jcink.com/index.php?showforum=26"
+        },
+        {
+            "name": "Route 2 - Shell's Farmland",
+            "pokemon": ["Budew", "Sunkern", "Caterpie", "Oddish", "Cherubi", "Mareep", "Combee", "Ponyta", "Miltank", "Skiddo", "Taurus", "Bouffalant"],
+            "link": "http://jinoa.b1.jcink.com/index.php?showforum=25"
+        },
+        {
+            "name": "Erinite Village",
+            "pokemon": ["Bellsprout", "Seedot", "Starly", "Venonat", "Spinarak", "Ledyba", "Nincada", "Pineco", "Yanma", "Deerling", "Comfey"],
+            "link": "http://jinoa.b1.jcink.com/index.php?showforum=27"
+        },
+        {
+            "name": "Route 3 - Malachite Swamps",
+            "pokemon": ["Grimer", "Weedle", "Burmy", "Croagunk", "Gulpin", "Koffing", "Tympole", "Goomy", "Skrelp", "Mareanie"],
+            "link": "http://jinoa.b1.jcink.com/index.php?showforum=28"
+        },
+        {
+            "name": "Pearlshire",
+            "pokemon": ["Rattata", "Trubbish", "Fletchling", "Lillipup", "Stunky", "Furfrou", "Timburr", "Bounsweet"],
+            "link": "http://jinoa.b1.jcink.com/index.php?showforum=29"
+        },
+        {
+            "name": "Route 4 - Crystal Ruins",
+            "pokemon": ["Slowpoke", "Pachirisu", "Cottonee", "Abra", "Golett", "Ralts", "Elgyem", "Sigilyph", "Unown", "Dhelmise", "Rockruff"],
+            "link": "http://jinoa.b1.jcink.com/index.php?showforum=33"
+        },
+        {
+            "name": "Sunstone City",
+            "pokemon": ["Skitty", "Minccino", "Growlithe", "Jigglypuff", "Pikachu", "Pansear", "Pansage", "Panpour", "Munna", "Solrock", "Lunatone"],
+            "link": "http://jinoa.b1.jcink.com/index.php?showforum=31"
+        },
+        {
+            "name": "Route 5 - Abandoned Carnival",
+            "pokemon": ["Plusle", "Minun", "Voltorb", "Blitzle", "Mr. Mime", "Electabuzz", "Pumpkaboo", "Drowzee", "Klink", "Drifloon", "Rotom", "Swirlix"],
+            "link": "http://jinoa.b1.jcink.com/index.php?showforum=34"
+        },
+        {
+            "name": "Sodalite Junction",
+            "pokemon": ["Shinx", "Trubbish", "Pidove", "Meowth", "Glameow", "Joltik", "Skitty", "Seviper", "Smeargle", "Dedenne", "Chatot", "Gothita"],
+            "link": "http://jinoa.b1.jcink.com/index.php?showforum=35"
+        },
+        {
+            "name": "Route 6 - Mt. Larimar",
+            "pokemon": ["Geodude", "Makuhita", "Teddiursa", "Aron", "Nosepass", "Onix", "Larvitar", "Absol", "Delibird", "Swinub", "Cryogonal", "Sneasel", "Snover", "Bergmite", "Absol", "Sandshrew (Alola)", "Vulpix (Alola)"],
+            "link": "http://jinoa.b1.jcink.com/index.php?showforum=30"
+        },
+        {
+            "name": "Route 7 - Copper Dunes",
+            "pokemon": ["Sandshrew", "Maractus", "Numel", "Hippopotas", "Scraggy", "Sandile", "Skorupi", "Baltoy", "Trapinch", "Darumaka", "Vullaby"],
+            "link": "http://jinoa.b1.jcink.com/index.php?showforum=36"
+        },
+        {
+            "name": "Granite City",
+            "pokemon": ["Taillow", "Ekans", "Bunnelby", "Patrat", "Helioptile", "Gligar", "Roggenrola", "Sawk", "Throh"],
+            "link": "http://jinoa.b1.jcink.com/index.php?showforum=37"
+        },
+        {
+            "name": "Route 8 - Peridot Valley",
+            "pokemon": ["Sentret", "Litleo", "Zangoose", "Girafarig", "Doduo", "Electrike", "Rhyhorn", "Swablu", "Lickitung", "Phanpy", "Kangaskhan", "Tropius"],
+            "link": "http://jinoa.b1.jcink.com/index.php?showforum=51"
+        },
+        {
+            "name": "Route 9 - Glacier Pass",
+            "pokemon": ["Wooper", "Smoochum", "Seel", "Spheal", "Snorunt", "Bergmite", "Swinub", "Rufflet", "Goldeen", "Wooper", "Shellder", "Spheal", "Seel", "Lapras"],
+            "link": "http://jinoa.b1.jcink.com/index.php?showforum=39"
+        },
+        {
+            "name": "Lapis Cove",
+            "pokemon": ["Bidoof", "Slowpoke", "Natu", "Buizel", "Inkay", "Magikarp", "Remoraid", "Staryu", "Buizel", "Carvanha", "Relicanth"],
+            "link": "http://jinoa.b1.jcink.com/index.php?showforum=40"
+        },
+        {
+            "name": "Route 10 - Amber Falls",
+            "pokemon": ["Meditite", "Woobat", "Zubat", "Diglett", "Drilbur", "Bronzor", "Binacle", "Roggenrola", "Sableye", "Dunsparce", "Wobbuffet"],
+            "link": "http://jinoa.b1.jcink.com/index.php?showforum=41"
+        },
+        {
+            "name": "Route 11 - Moonstone Forest",
+            "pokemon": ["Hoothoot (nighttime)", "Volbeat", "Illumise", "Paras", "Shroomish", "Clefairy", "Purrloin", "Phantump", "Stantler", "Heracross", "Misdreavus", "Pinsir", "Morelull", "Spritzee", "Minior"],
+            "link": "http://jinoa.b1.jcink.com/index.php?showforum=42"
+        },
+        {
+            "name": "Route 12 - Citrine Beach",
+            "pokemon": ["Krabby", "Wingull", "Marill", "Corphish", "Shellos", "Clauncher", "Dwebble", "Sandygast", "Magikarp", "Tentacool", "Remoraid", "Carvanha", "Horsea", "Chinchou", "Wailmer", "Mantine"],
+            "link": "http://jinoa.b1.jcink.com/index.php?showforum=32"
+        },
+        {
+            "name": "Opal Isles",
+            "pokemon": ["Kricketot", "Hoppip", "Psyduck", "Slakoth", "Exeggcute", "Tropius", "Chatot", "Luvdisc", "Clamperl", "Chinchou", "Horsea", "Alomomola", "Frillish"],
+            "link": "http://jinoa.b1.jcink.com/index.php?showforum=43"
+        },
+        {
+            "name": "Route 13 - Howlite Graves",
+            "pokemon": ["Gastly", "Shuppet", "Cubone", "Duskull", "Murkrow", "Litwik", "Honedge", "Yamask", "Vulpix", "Marowak (Alola)"],
+            "link": "http://jinoa.b1.jcink.com/index.php?showforum=44"
+        },
+        {
+            "name": "Zirconia City",
+            "pokemon": ["Pawniard", "Skarmory", "Magnemite", "Ferroseed", "Shelmet", "Karrablast", "Beldum", "Aron", "Porygon", "Grubbin"],
+            "link": "http://jinoa.b1.jcink.com/index.php?showforum=45"
+        },
+        {
+            "name": "Victory Road",
+            "pokemon": ["Durant", "Slugma", "Whismur", "Machop", "Heatmor", "Magmar", "Houndour", "Torkoal", "Carbink", "Snorlax", "Axew"],
+            "link": "http://jinoa.b1.jcink.com/index.php?showforum=50"
+        },
+        {
+            "name": "Cubic City - Lab",
+            "pokemon": ["Bulbasaur", "Charmander", "Squirtle", "Chikorita", "Cyndaquil", "Totodile", "Treecko", "Torchic", "Mudkip", "Turtwig", "Chimchar", "Piplup", "Snivy", "Tepig", "Oshawott", "Chespin", "Fennekin", "Froakie", "Rowlet", "Litten", "Poplio" ],
+            "link": "http://jinoa.b1.jcink.com/index.php?showforum=46"
+        },
+        {
+            "name": "Team Rocket Lab",
+            "pokemon": ["Meowth", "Glameow", "Shinx", "Skitty", "Purrloin", "Litleo", "Seviper", "Koffing", "Poochyena", "Scraggy", "Zubat", "Ekans", "Makuhita", "Espurr", "Houndour", "Carvanha", "Cacnea", "Tyrogue", "Sandalit", "Stufful"],
+            "link": "http://jinoa.b1.jcink.com/index.php?showforum=78"
+        }
+    ]
+}

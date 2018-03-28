@@ -1,0 +1,31 @@
+.finder {
+    padding: 2em;
+}
+
+.pokemon-container {
+    display: flex;
+    border: 2px solid #f0f0f0;
+    border-radius: 5%;
+    margin: 1em;
+    padding: .5em;
+    display: inline-flex;
+    width: 215px;
+}
+
+.pokeball {
+}
+
+
+
+.pokemon-image-wrap {
+}
+
+.pokemon-image {
+    width: 215px;
+}
+
+.pokemon-text {
+    margin: 0px auto;
+    max-width: 75%;
+    font-size: .70em;
+}
