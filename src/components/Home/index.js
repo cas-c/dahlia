@@ -39,7 +39,7 @@ const Home = () => (
             <br />
             - - - - - - - - - - -
             <br />
-            <a href='https://www.pixiv.net/member.php?id=169559' target='_blank'>art credit</a>
+            <a href='https://www.pixiv.net/member_illust.php?mode=medium&illust_id=26490274' target='_blank'>art credit</a>
             <br />
             - - - - - - - - - - -
             <br />
