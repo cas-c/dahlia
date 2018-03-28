@@ -1,11 +1,10 @@
 import React from 'react';
 import './App.css';
+import Home from './components/Home';
 import BioForm from './components/BioForm';
 import Finder from './components/Finder';
 
 import { HashRouter as Router, Route } from 'react-router-dom';
-
-const Home = () => <div />;
 
 const App = () => (
     <Router>

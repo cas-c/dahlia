@@ -1,4 +1,3 @@
-'use strict';
 const uniqueRandomArray = require('unique-random-array');
 const pokemon = require('./data/en');
 
