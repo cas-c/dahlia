@@ -22,7 +22,8 @@ class Finder extends React.Component {
     }
 
     componentDidMount = () => {
-        this.setState({ selected: JSON.parse(localStorage.getItem('selectedPokemon')) });
+        const ls = JSON.parse(localStorage.getItem('selectedPokemon'));
+        this.setState({ selected: ls || [] });
     }
 
     select = selected => {
