@@ -1,6 +1,6 @@
 import React from 'react';
 import VirtualizedSelect from 'react-virtualized-select'
-import pokemon from 'pokemon';
+import pokemon from '../../lib/pokemon';
 
 import './index.css';
 import Pokemon from './Pokemon';

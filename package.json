@@ -4,7 +4,6 @@
   "private": true,
   "dependencies": {
     "bulma": "^0.6.2",
-    "pokemon": "^1.2.2",
     "react": "^16.2.0",
     "react-copy-to-clipboard": "^5.0.1",
     "react-day-picker": "^7.1.4",
