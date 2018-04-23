@@ -7,12 +7,12 @@
         },
         {
             "name": "Route 1 - Lazuli River",
-            "pokemon": ["Buneary", "Pidgey", "Wurmple", "Nidoran (♂/♀)", "Hoppip", "Sewaddle", "Flabébé", "Bonsly", "Pikipek", "Yungoos", "Magikarp", "Goldeen", "Barboach", "Lotad", "Stunfisk", "Surskit" ],
+            "pokemon": ["Buneary", "Pidgey", "Wurmple", "Nidoran♂", "Nidoran♀", "Hoppip", "Sewaddle", "Flabebe", "Bonsly", "Pikipek", "Yungoos", "Magikarp", "Goldeen", "Barboach", "Lotad", "Stunfisk", "Surskit" ],
             "link": "http://jinoa.b1.jcink.com/index.php?showforum=26"
         },
         {
             "name": "Route 2 - Shell's Farmland",
-            "pokemon": ["Budew", "Sunkern", "Caterpie", "Oddish", "Cherubi", "Mareep", "Combee", "Ponyta", "Miltank", "Skiddo", "Taurus", "Bouffalant"],
+            "pokemon": ["Budew", "Sunkern", "Caterpie", "Oddish", "Cherubi", "Mareep", "Combee", "Ponyta", "Miltank", "Skiddo", "Tauros", "Bouffalant"],
             "link": "http://jinoa.b1.jcink.com/index.php?showforum=25"
         },
         {
@@ -42,7 +42,7 @@
         },
         {
             "name": "Route 5 - Abandoned Carnival",
-            "pokemon": ["Plusle", "Minun", "Voltorb", "Blitzle", "Mr. Mime", "Electabuzz", "Pumpkaboo", "Drowzee", "Klink", "Drifloon", "Rotom", "Swirlix"],
+            "pokemon": ["Plusle", "Minun", "Voltorb", "Blitzle", "Mr. Mime", "Electabuzz", "Pumpkaboo", "Drowzee", "Klink", "Drifloon", "Rotom", "Swirlix", "Mimikyu"],
             "link": "http://jinoa.b1.jcink.com/index.php?showforum=34"
         },
         {
@@ -52,7 +52,7 @@
         },
         {
             "name": "Route 6 - Mt. Larimar",
-            "pokemon": ["Geodude", "Makuhita", "Teddiursa", "Aron", "Nosepass", "Onix", "Larvitar", "Absol", "Delibird", "Swinub", "Cryogonal", "Sneasel", "Snover", "Bergmite", "Absol", "Sandshrew (Alola)", "Vulpix (Alola)"],
+            "pokemon": ["Geodude", "Makuhita", "Teddiursa", "Aron", "Nosepass", "Onix", "Larvitar", "Absol", "Delibird", "Swinub", "Cryogonal", "Sneasel", "Snover", "Bergmite", "Absol", "Sandshrew", "Vulpix"],
             "link": "http://jinoa.b1.jcink.com/index.php?showforum=30"
         },
         {
@@ -87,7 +87,7 @@
         },
         {
             "name": "Route 11 - Moonstone Forest",
-            "pokemon": ["Hoothoot (nighttime)", "Volbeat", "Illumise", "Paras", "Shroomish", "Clefairy", "Purrloin", "Phantump", "Stantler", "Heracross", "Misdreavus", "Pinsir", "Morelull", "Spritzee", "Minior"],
+            "pokemon": ["Oranguru", "Hoothoot", "Volbeat", "Illumise", "Paras", "Shroomish", "Clefairy", "Purrloin", "Phantump", "Stantler", "Heracross", "Misdreavus", "Pinsir", "Morelull", "Spritzee", "Minior"],
             "link": "http://jinoa.b1.jcink.com/index.php?showforum=42"
         },
         {
@@ -102,7 +102,7 @@
         },
         {
             "name": "Route 13 - Howlite Graves",
-            "pokemon": ["Gastly", "Shuppet", "Cubone", "Duskull", "Murkrow", "Litwik", "Honedge", "Yamask", "Vulpix", "Marowak (Alola)"],
+            "pokemon": ["Gastly", "Shuppet", "Cubone", "Duskull", "Murkrow", "Litwick", "Honedge", "Yamask", "Vulpix", "Marowak"],
             "link": "http://jinoa.b1.jcink.com/index.php?showforum=44"
         },
         {
@@ -117,12 +117,12 @@
         },
         {
             "name": "Cubic City - Lab",
-            "pokemon": ["Bulbasaur", "Charmander", "Squirtle", "Chikorita", "Cyndaquil", "Totodile", "Treecko", "Torchic", "Mudkip", "Turtwig", "Chimchar", "Piplup", "Snivy", "Tepig", "Oshawott", "Chespin", "Fennekin", "Froakie", "Rowlet", "Litten", "Poplio" ],
+            "pokemon": ["Bulbasaur", "Charmander", "Squirtle", "Chikorita", "Cyndaquil", "Totodile", "Treecko", "Torchic", "Mudkip", "Turtwig", "Chimchar", "Piplup", "Snivy", "Tepig", "Oshawott", "Chespin", "Fennekin", "Froakie", "Rowlet", "Litten", "Popplio" ],
             "link": "http://jinoa.b1.jcink.com/index.php?showforum=46"
         },
         {
             "name": "Team Rocket Lab",
-            "pokemon": ["Meowth", "Glameow", "Shinx", "Skitty", "Purrloin", "Litleo", "Seviper", "Koffing", "Poochyena", "Scraggy", "Zubat", "Ekans", "Makuhita", "Espurr", "Houndour", "Carvanha", "Cacnea", "Tyrogue", "Sandalit", "Stufful"],
+            "pokemon": ["Salandit", "Meowth", "Glameow", "Shinx", "Skitty", "Purrloin", "Litleo", "Seviper", "Koffing", "Poochyena", "Scraggy", "Zubat", "Ekans", "Makuhita", "Espurr", "Houndour", "Carvanha", "Cacnea", "Tyrogue", "Sandalit", "Stufful"],
             "link": "http://jinoa.b1.jcink.com/index.php?showforum=78"
         }
     ]
