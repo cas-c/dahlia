@@ -28,6 +28,9 @@ const Home = () => (
                 <Link to={'/finder'}>looking for something?</Link>
             </div>
             <div className='welcome-text'>
+                <Link to={'/xp'}>calculator</Link>
+            </div>
+            <div className='welcome-text'>
                 <a href='https://www.pixiv.net/member_illust.php?mode=medium&illust_id=26490274' rel="noopener noreferrer" target='_blank'>looks familiar</a>
             </div>
             <a href='mailto:dahlia@witch.cafe' title="let's talk">✉</a>{ ' ' }
