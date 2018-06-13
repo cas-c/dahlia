@@ -6,19 +6,17 @@ const levels = Array.from(new Array(99), (v, i) => ({ value: (i + 1), label: (i 
 
 const levelToXPNeeded = level => 25 * (level + 3);
 
-const calculate = (xpToAdd, currentLevel, luckyEgg, xpShare) => {
-    let sharedXP = 0;
-    if (xpShare) sharedXP = xpToAdd / 2;
+const calculate = (xpToAdd, currentLevel, luckyEgg) => {
     if (luckyEgg) xpToAdd = xpToAdd * 1.5;
     const xpToNextLevel = levelToXPNeeded(currentLevel);
     if (xpToAdd < xpToNextLevel) {
-        return { nextLevel: currentLevel, remainingXP: xpToAdd, sharedXP };
+        return { nextLevel: currentLevel, remainingXP: xpToAdd };
     } else if (xpToAdd === xpToNextLevel) {
-        return { nextLevel: currentLevel + 1, remainingXP: 0, sharedXP };
+        return { nextLevel: currentLevel + 1, remainingXP: 0 };
     }
     let remainingXP = xpToAdd - xpToNextLevel; // 50
     if (remainingXP < xpToNextLevel) {
-        return { nextLevel: currentLevel + 1, remainingXP, sharedXP };
+        return { nextLevel: currentLevel + 1, remainingXP };
     } else {
         return calculate(remainingXP, currentLevel + 1);
     }
@@ -44,21 +42,24 @@ class Calculator extends React.Component {
             this.setState({ level: '', output: { nextLevel: null }});
             return;
         }
-        this.setState({ level: e.value, output: calculate(this.state.newXP, e.value, this.state.luckyEgg, this.state.xpShare) });
+        this.setState({ level: e.value, output: calculate(this.state.newXP, e.value, this.state.luckyEgg) });
     }
     updateNewXP = (e) => {
         const newXP = parseInt(e.target.value, 10);
         if (isNaN(newXP)) {
-            this.setState({ newXP: 0, output: calculate(0, this.state.level, this.state.luckyEgg, this.state.xpShare) });
+            this.setState({ newXP: 0, output: calculate(0, this.state.level, this.state.luckyEgg) });
             return;
         }
-        this.setState({ newXP, output: calculate(newXP, this.state.level, this.state.luckyEgg, this.state.xpShare) });
+        this.setState({ newXP, output: calculate(newXP, this.state.level, this.state.luckyEgg) });
+        if (this.state.xpShare) {
+            this.setState({ sharedXP: newXP / 2 });
+        }
     }
     updateLuckyEgg = (e) => {
-        this.setState({ luckyEgg: e.target.checked, output: calculate(this.state.newXP, this.state.level, e.target.checked, this.state.xpShare) });
+        this.setState({ luckyEgg: e.target.checked, output: calculate(this.state.newXP, this.state.level, e.target.checked) });
     }
     updateXPShare = (e) => {
-        this.setState({ xpShare: e.target.checked, output: calculate(this.state.newXP, this.state.level, this.state.luckyEgg, e.target.checked) });
+        this.setState({ xpShare: e.target.checked, output: calculate(this.state.newXP, this.state.level, this.state.luckyEgg), sharedXP: e.target.checked ? this.state.newXP / 2 : 0 });
     }
     render() {
         return (
@@ -97,7 +98,7 @@ class Calculator extends React.Component {
                     </div>
                 </div>
                 <br /><br />
-                <OutputDisplay nextLevel={this.state.output.nextLevel} remainingXP={this.state.output.remainingXP} xpNeeded={levelToXPNeeded(this.state.output.nextLevel)} sharedXP={this.state.output.sharedXP}/>
+                <OutputDisplay nextLevel={this.state.output.nextLevel} remainingXP={this.state.output.remainingXP} xpNeeded={levelToXPNeeded(this.state.output.nextLevel)} sharedXP={this.state.sharedXP}/>
             </div>
         )
     }
