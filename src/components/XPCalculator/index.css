@@ -1,0 +1,17 @@
+.xp-calculator {
+    margin: 5rem;
+}
+
+.cover-picture {
+    border-radius: 100%;
+    max-width: 250px;
+}
+
+.calculator-container {
+    width: 30rem;
+    margin: 0 auto;
+}
+
+.xpCheckbox {
+    margin-right: 1rem;
+}

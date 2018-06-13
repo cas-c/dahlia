@@ -19,7 +19,7 @@ const Home = () => (
         <div className='home-item home-content'>
             <img alt='' src={image} className='welcome-image'/>
             <div className='welcome-text'>
-                dahlia's room
+                welcome to dahlia's room
             </div>
             <div className='welcome-text'>
                 <Link to={'/bio'}>tell me about you</Link>
