@@ -1,6 +1,7 @@
 import React from 'react';
 import VirtualizedSelect from 'react-virtualized-select';
 import OutputDisplay from './OutputDisplay';
+import ExperienceFields from './ExperienceFields';
 
 const levels = Array.from(new Array(99), (v, i) => ({ value: (i + 1), label: (i + 1) }));
 
@@ -44,8 +45,8 @@ class Calculator extends React.Component {
         }
         this.setState({ level: e.value, output: calculate(this.state.newXP, e.value, this.state.luckyEgg) });
     }
-    updateNewXP = (e) => {
-        const newXP = parseInt(e.target.value, 10);
+    updateNewXP = (total) => {
+        const newXP = parseInt(total, 10);
         if (isNaN(newXP)) {
             this.setState({ newXP: 0, output: calculate(0, this.state.level, this.state.luckyEgg) });
             return;
@@ -77,9 +78,8 @@ class Calculator extends React.Component {
                 </div>
                 <div className='field'>
                     <label className='label'>New Experience</label>
-                    <div className='control'>
-                        <input className='input' type='text' value={this.state.newXP} onChange={this.updateNewXP} placeholder='Any whole number zero or above...' />
-                    </div>
+                    {/*  */}
+                    <ExperienceFields updateNewXP={this.updateNewXP} />
                 </div>
                 <div className='field'>
                     <div className='control'>

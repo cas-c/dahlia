@@ -6,7 +6,7 @@ const OutputDisplay = ({ nextLevel, remainingXP, xpNeeded, sharedXP }) => {
         <div>
             <h4>Your new level.</h4>
             <br />
-            Level { nextLevel } ({ remainingXP ? remainingXP : 0 }/{ xpNeeded }xp)
+            Level { nextLevel } ({ remainingXP ? remainingXP : 0 }/{ xpNeeded }xp, {xpNeeded - remainingXP} to level up)
             {
                 sharedXP > 0 &&
                 <div>

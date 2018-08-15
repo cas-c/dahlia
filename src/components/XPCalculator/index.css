@@ -15,3 +15,12 @@
 .xpCheckbox {
     margin-right: 1rem;
 }
+
+.plus-sign {
+    font-size: 1em;
+    color: #00FF99;
+}
+
+.total-counter {
+    font-size: .8em;
+}
